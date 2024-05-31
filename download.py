@@ -36,7 +36,7 @@ downLoadUtil = HFUtilDownload()
 
 
 url = "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_l_8x8_300e_coco/yolox_l_8x8_300e_coco_20211126_140236-d3bd2b23.pth"
-localFilePath = "./dwpose/yolox_l_8x8_300e_coco.pth"
+localFilePath = "./pretrained_weights/dwpose/yolox_l_8x8_300e_coco.pth"
 download_file(url, localFilePath)
 
 
