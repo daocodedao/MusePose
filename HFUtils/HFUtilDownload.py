@@ -4,6 +4,8 @@ from huggingface_hub import snapshot_download
 from tqdm import tqdm
 
 from .HFUtilBase import HFUtilBase
+import platform
+
 
 
 class HFUtilDownload(HFUtilBase):

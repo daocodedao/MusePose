@@ -3,6 +3,17 @@ from HFUtils.HFUtilDownload import HFUtilDownload
 
 import requests,os
 from tqdm import tqdm
+import platform
+
+
+def getProxy():
+    if platform.system() == "Linux":
+            return "192.168.0.77:18808"
+    else:
+        return "127.0.0.1:10809"
+
+os.environ['HTTP_PROXY'] = getProxy()
+os.environ['HTTPS_PROXY'] = getProxy()
 
 
 def download_file(url, local_filename=None):
@@ -37,7 +48,8 @@ downLoadUtil = HFUtilDownload()
 
 url = "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_l_8x8_300e_coco/yolox_l_8x8_300e_coco_20211126_140236-d3bd2b23.pth"
 localFilePath = "./pretrained_weights/dwpose/yolox_l_8x8_300e_coco.pth"
-download_file(url, localFilePath)
+if not os.path.exists(localFilePath):
+    download_file(url, localFilePath)
 
 
 
