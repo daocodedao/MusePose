@@ -47,10 +47,10 @@ def main():
 
     config = OmegaConf.load(args.config)
 
-    if config.weight_dtype == "fp16":
-        weight_dtype = torch.float16
-    else:
-        weight_dtype = torch.float32
+    # if config.weight_dtype == "fp16":
+    weight_dtype = torch.float16
+    # else:
+    #     weight_dtype = torch.float32
 
     vae = AutoencoderKL.from_pretrained(
         config.pretrained_vae_path,

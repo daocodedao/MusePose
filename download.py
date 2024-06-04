@@ -69,8 +69,9 @@ downLoadUtil.download_folder_from_repo(repo_id=repo_id,
                                          local_dir=local_dir)
 
 repo_id="yzd-v/DWPose"
+dw_dir = f"{local_dir}/dwpose/"
 downLoadUtil.download_folder_from_repo(repo_id=repo_id, 
-                                         local_dir=local_dir)
+                                         local_dir=dw_dir)
 
 
 repo_id="lambdalabs/sd-image-variations-diffusers"
