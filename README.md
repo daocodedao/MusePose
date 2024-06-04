@@ -1,5 +1,10 @@
 
 # 安装
+
+### 机器
+机器 66
+
+
 ### Build environment
 python3.10 -m venv venv
 source venv/bin/activate
